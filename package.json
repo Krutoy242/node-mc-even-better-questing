@@ -1,0 +1,128 @@
+{
+  "name": "mc-even-better-questing",
+  "version": "1.0.0",
+  "description": "CLI tool for Minecraft's Mod Better Questing - split into files and add lang codes",
+  "main": "build/index.js",
+  "types": "build/index.d.js",
+  "bin": "build/cli.js",
+  "repository": "https://github.com/Krutoy242/node-mc-even-better-questing",
+  "license": "MIT",
+  "keywords": [
+    "minecraft",
+    "json",
+    "parser",
+    "Better Questing",
+    "lang",
+    "localization"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "glob": "^8.0.1",
+    "typescript-memoize": "^1.1.0",
+    "yargs": "^17.4.1"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/node": "^17.0.25",
+    "@types/yargs": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^8.12.0",
+    "eslint-config-alloy": "^4.5.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-functional": "^4.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3"
+  },
+  "files": [
+    "build/main",
+    "!**/*.spec.*",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "htmlWhitespaceSensitivity": "ignore",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "rangeStart": 0,
+    "proseWrap": "preserve",
+    "embeddedLanguageFormatting": "auto"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true
+    },
+    "ignorePatterns": [
+      "node_modules",
+      "build"
+    ],
+    "plugins": [
+      "import",
+      "eslint-comments",
+      "functional"
+    ],
+    "extends": [
+      "alloy",
+      "alloy/typescript"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/no-parameter-properties": 0,
+      "max-nested-callbacks": "off",
+      "max-params": "off",
+      "no-duplicate-imports": 2,
+      "no-else-return": 2,
+      "no-promise-executor-return": 2,
+      "no-return-assign": "off",
+      "no-sequences": "off",
+      "no-template-curly-in-string": 2,
+      "no-unused-expressions": "error",
+      "require-atomic-updates": 2,
+      "eslint-comments/disable-enable-pair": [
+        "error",
+        {
+          "allowWholeFile": true
+        }
+      ],
+      "eslint-comments/no-unused-disable": "error",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc"
+          }
+        }
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "ignoreDeclarationSort": true,
+          "ignoreCase": true
+        }
+      ]
+    }
+  }
+}
